@@ -125,6 +125,7 @@ function closeModal() {
 
 function initPlayer(id) {
 	var iframe = document.querySelector('.video__modal iframe');
+	// console.log('id', id);
 
 	if (iframe) {
 		vimeoPlayer.loadVideo(id).then(function (id) {
@@ -133,8 +134,8 @@ function initPlayer(id) {
 			return "error";
 		});
 	} else {
-		var firstID = document.querySelector('[data-vimeoid]').dataset.vimeoid;
-		vimeoPlayer = new Vimeo.Player('player', { id: firstID, responsive: true });
+		var vimeoID = id || document.querySelector('[data-vimeoid]').dataset.vimeoid;
+		vimeoPlayer = new Vimeo.Player('player', { id: vimeoID, responsive: true });
 		vimeoPlayer.play();
 	}
 }
