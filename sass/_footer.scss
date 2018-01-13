@@ -1,0 +1,113 @@
+.footer {
+	background: $black;
+	color: $white;
+	font-size: 0.8em;
+	padding: 1rem;
+	max-width: 80rem;
+	margin: 0 auto;
+	box-sizing: border-box;
+
+	@media (max-width: $small) {
+		font-size: 10px;
+	}
+}
+
+.footer__flexcontainer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+
+	@media (max-width: $small) {
+		flex-direction: column;
+	}
+}
+
+.address_container--footer {
+	flex: 1 1 auto;
+	margin: 1em 0;
+}
+
+.address__list--footer {
+	margin: 0;
+	dt {
+		font-weight: 700;
+		letter-spacing: 0.2em;
+	}
+	dd {
+		margin: 0;
+		letter-spacing: 0.1em;
+	}
+
+	@media (max-width: $small) {
+		text-align: center;
+	}
+}
+
+.contact__container--footer {
+	display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1 1 auto;
+	margin: 1em 0;
+    @media (max-width: $small) {
+		order: -1; 
+	}
+}
+
+//TODO: move to partial
+
+.contact__link {
+	text-decoration:none;
+	color: currentColor;
+	transition: all 0.3s;
+	padding: 0.5em;
+
+	&:hover,&:focus {
+		text-decoration: underline;
+	}
+}
+
+.contact__container {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 auto;
+	margin: 1em 0;
+	@media (max-width: $small) {
+		font-size: 10px;
+	}
+}
+
+
+
+//TODO: move
+.overlay--dark {
+	background: rgba($black, 0.8);
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 10;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.5s;
+
+	&.active {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+.blurable {
+	transition: blur 2s;
+	filter: blur(0);
+	@media (min-width: $small) {
+		&.blur {
+		filter: blur(5px);
+	}
+	}
+}

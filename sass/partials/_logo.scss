@@ -1,0 +1,32 @@
+.logo__container {
+	width:100vw;
+	max-width: 10rem;
+	margin: 0 auto 1rem;
+}
+
+.logo__container--top {
+    display: block;
+	width:100%;
+	max-width: 20em;
+	margin: 0 auto;
+    @media (max-width: $medium) {
+		width: 40%;
+	}
+}
+
+.logo__container--menu {
+	width:30%;
+	max-width: 20em;
+	color: $black;
+	display: block;
+	margin: 0 auto;
+	@media (max-width: $medium) {
+		justify-content: center;
+	}
+
+}
+
+.logo__svg {
+	fill: currentColor;
+	color: currentColor;
+}

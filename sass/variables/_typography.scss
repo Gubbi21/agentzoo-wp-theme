@@ -1,0 +1,73 @@
+$font--heading: 'Playfair Display', serif;
+$font--body: 'Raleway', sans-serif;
+
+body {
+	font-family: $font--body;
+	font-size: 16px;
+	line-height: 1.5;
+	color: $white;
+
+	@media (max-width: $large) {
+		font-size: 14px;
+	}
+
+}
+
+h1 {
+	font-family: $font--heading;
+	font-size: 4em;
+	font-weight: 700;
+	margin-bottom: 0.5em;
+	letter-spacing: 0.1em;
+	font-feature-settings: "liga" 0;
+}
+
+h2 {
+	font-family: $font--heading;
+	font-size: 3em;
+	letter-spacing: 0.1em;
+	font-feature-settings: "liga" 0;
+	margin-bottom: 0.3em;
+}
+
+h3 {
+	font-family: $font--body;
+	font-size: 3em;
+	letter-spacing: 0.1em;
+	font-feature-settings: "liga" 0;
+	margin-bottom: 0.3em;
+}
+
+h1,h2,h3,p {
+	margin-top: 0;
+}
+
+p {
+	font-weight: 300;
+}
+
+.breakline {
+	width: 5em;
+	border-bottom: 0.2em solid $black;
+    margin: 2em auto 2.5em;
+}
+
+.breakline--small {
+	width: 3em;
+	border-bottom: 0.2em solid $white;
+    margin: 0.5em;
+}
+
+.underline {
+	position: relative;
+	margin-bottom: 1em;
+	&::after {
+		content: '';
+		width: 1.5em;
+		border-bottom: 0.2rem solid $black;
+		position: absolute;
+		bottom: -.5em;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}

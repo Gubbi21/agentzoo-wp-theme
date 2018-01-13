@@ -1,0 +1,130 @@
+$breakpoint--director: $large; 
+.director-header__container {
+	position: relative;
+	width: 100vw;
+	min-height: 50vh;
+	padding: 5em 0;
+
+	&:after {
+		content: '';
+	    position: absolute;
+	    width: 100%;
+	    height: 100%;
+	    background: linear-gradient(135deg, $color--secondary 0%, $color--tertiary 100%);
+	    opacity: 0.4;
+	    z-index: 2;
+	    top: 0;
+	}
+	@media (max-width: $breakpoint--director) {
+		padding: 0;
+		&:after {
+			height: 50vh;
+		}
+	}
+	
+}
+
+.director-header__flexcontainer {
+    max-width: 80rem;
+    margin: 0 auto;
+    display: flex;
+    height: 100%;
+    align-items: center;
+
+    @media (max-width: $breakpoint--director) {
+    	background: $white;
+    }
+
+}
+
+.director-header__content {
+	z-index: 10;
+	color: $white;
+	padding: 0 1rem;
+
+	p { //paragraphs inside the director header
+		max-width: 40em;
+	}
+
+	@media (max-width: $breakpoint--director) {
+		text-align: center;
+		flex: 1;
+		color: $black;
+		padding: 1em;
+		p {
+			margin: 0 auto 1em;
+		}
+
+		.btn__container {
+			text-align: center;
+
+			.btn--reverse-white {
+				color: $black;
+				border-color: $black;
+			}
+			.btn--white {
+				color: $white;
+				background-color: $color--primary;
+				border-color: $color--primary;
+			}
+		}
+	}
+}
+
+.director-header__title {
+	letter-spacing: 0.1em;
+	margin-bottom: 0.2em;
+}
+
+.director-header__awardtitle {
+	margin: 0;
+	margin-bottom: 0.2em;
+}
+
+.director-header__awardlist {
+	list-style: none;
+    columns: 3;
+	padding: 0;
+	margin: 0;
+	margin-bottom: 1em;
+	font-size: 0.8em;
+	line-height: 1.6;
+//	text-transform: uppercase;
+ @media (max-width: $medium) {
+		columns:2;
+	}
+
+	@media (max-width: $small) {
+		columns:1;
+	}
+}
+
+.director__portrait--header {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 70%;
+	height: 100%;
+	background-size: cover;
+	background-position: 50% 50%;
+	z-index:1;
+
+	&:before {
+		content: '';
+	    position: absolute;
+	    width: 100%;
+	    height: 100%;
+	    background: linear-gradient(90deg, $black 0%, transparent 80%);
+	}
+
+	@media (max-width: $breakpoint--director) {
+		width: 100%;
+		height: 50vh;
+		position: relative;
+
+		&:before {
+			display: none;
+		}
+	}
+}

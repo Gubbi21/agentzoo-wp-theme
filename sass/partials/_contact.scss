@@ -1,0 +1,30 @@
+.contact__flexcontainer {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.contact__flexelement {
+	padding: 1em;
+	box-sizing: border-box;
+	flex: 1 1 auto;
+	text-align: center;
+}
+
+.contact__list {
+	dt {
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		font-feature-settings: "liga" 0;
+		font-size: 0.9em;
+	}
+	dd {
+		margin: 0;
+		&+dt {
+			margin-top: 0.5em;
+		}
+		.btn {
+			margin: 1em 0;
+		}
+	}
+}

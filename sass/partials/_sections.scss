@@ -1,0 +1,45 @@
+.section--grey {
+	background-color: $lightgrey;
+	color: $black;
+}
+
+.section--white {
+	background-color: $white;
+	color: $black;
+}
+
+.section__container {
+	max-width: 80rem;
+	margin: 0 auto;
+	padding: 5rem 1rem;
+}
+
+.section__container--director {
+	max-width: 80rem;
+	margin: 0 auto;
+	padding: 5rem 0;
+}
+
+.section__container--slim {
+	max-width: 65rem;
+	margin: 0 auto;
+	padding: 5rem 1rem;
+
+	p {
+		max-width: 40em;
+		margin: 0 auto 2em;
+	}
+}
+
+.section__container--fullwidth {
+	padding: 5rem 0;
+}
+
+.section__title {
+	text-align: center;
+}
+
+.columns__container {
+	columns: 20em 2;
+	column-gap: 1rem;
+}
